@@ -7,11 +7,9 @@ def line(katz_deli)
   if katz_deli.empty?
     puts "The line is currently empty."
   else
-    counter = 1
     output_line = []
-    katz_deli.each do |person|
-      output_line.push("#{counter}. #{person}")
-      counter += 1
+    katz_deli.each.with.index(1) do |person, i|
+      output_line.push("#{i}. #{person}")
     end
     puts "The line is currently: #{output_line.join(" ")}"
   end
