@@ -9,7 +9,7 @@ def line(katz_deli)
   else
     output_line = []
     katz_deli.each.with_index(1) do |person, i|
-      output_line.push("#{i}. #{person}")
+      output_line << "#{i}. #{person}"
     end
     puts "The line is currently: #{output_line.join(" ")}"
   end
